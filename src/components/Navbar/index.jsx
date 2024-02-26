@@ -67,17 +67,19 @@ const Navbar = () => {
             </div>
             <p>Network Name</p>
           </div>
-          <button onClick={() => {}}>Address</button>
+            <button className="" onClick={() => setOpenModel(true)}>
+              Address
+            </button>
           {openModel && (
             <Model setOpenModel={setOpenModel} connectWallet="Connect" />
           )}
         </div>
-
-        {/* Tokenlist Components */}
-        {openTokenBox && (
-          <TokenList setOpenTokenBox={setOpenTokenBox} tokenData="Hey" />
-        )}
       </div>
+
+      {/* Tokenlist Components */}
+      {openTokenBox && (
+        <TokenList setOpenTokenBox={setOpenTokenBox} tokenData="Hey" />
+      )}
     </div>
   );
 };
